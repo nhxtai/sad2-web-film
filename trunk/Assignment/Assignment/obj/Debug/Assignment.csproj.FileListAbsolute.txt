@@ -1,0 +1,7 @@
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\bin\Assignment.dll
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\bin\Assignment.pdb
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\bin\EntityFramework.dll
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\bin\EntityFramework.xml
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\obj\Debug\Assignment.csprojResolveAssemblyReference.cache
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\obj\Debug\Assignment.dll
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\obj\Debug\Assignment.pdb
