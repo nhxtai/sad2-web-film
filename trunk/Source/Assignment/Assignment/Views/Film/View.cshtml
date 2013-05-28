@@ -1,6 +1,26 @@
-﻿@{
+﻿@model Assignment.Models.DetailModel
+@{
     ViewBag.Title = "View";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Movie365</h2>
+<html>
+<head>
+    <link href="../../Content/bootstrap/css/bootstrap.css" rel="Stylesheet" />
+    <link href="../../Content/bootstrap/css/Custom.css" rel="Stylesheet" />
+</head>
+<body>
+    <h2>
+        Movie365</h2>
+    <div class="movieInfo" style="float: left">
+        <span>
+            <img src="@Model.Film.Poster" alt=""/></span> <span>
+                <p>@Model.Film.FullTitle</p>
+            </span><span>
+                <p>@Model.Film.Description</p>
+            </span>
+    </div>
+    <script src="/Content/bootstrap/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="/Content/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="/Content/bootstrap/js/holder.js" type="text/javascript"></script>
+</body>
+</html>
