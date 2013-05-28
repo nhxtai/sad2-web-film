@@ -68,7 +68,7 @@ body
 
 	.thumbnail
 	{
-		border: blue thin solid;/*test*/
+		/*border: blue thin solid;*//*test*/
 		padding: 0;
 
 	}
@@ -82,7 +82,7 @@ body
 	#top-film
 	{
 		border: #DDDDDD thin solid;
-		border: red thin solid;/*test*/
+		/*border: red thin solid;*//*test*/
 
 		-webkit-border-radius: 10px;
 		-moz-border-radius: 10px;
@@ -94,7 +94,7 @@ body
 	/* Footer */
 	#footer
 	{
-		border: blue thin solid;/*test*/
+		/*border: blue thin solid;*//*test*/
 		height: 100px;
 		width: 90%;
 		margin: auto;
