@@ -14,12 +14,8 @@ namespace Assignment.Controllers
 
         public ActionResult View(int id)
         {
-            DataContextDataContext ass = new DataContextDataContext();
-            tblFilm film = ass.tblFilms.SingleOrDefault(f => f.FilmID == id);
-            DetailModel dm = new DetailModel();
-            dm.Film = film;
-            dm.ListComment = null;
-            return View(dm);
+           
+            return View();
         }
 
     }
