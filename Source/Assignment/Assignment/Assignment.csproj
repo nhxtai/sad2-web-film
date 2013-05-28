@@ -67,13 +67,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DataContext.designer.cs">
+    <Compile Include="Models\ViewModel\DetailModel.cs" />
+    <Compile Include="Models\ViewModel\HomeModel.cs" />
+    <Compile Include="Models\Movies.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataContext.dbml</DependentUpon>
+      <DependentUpon>Movies.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Models\DetailModel.cs" />
-    <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -154,7 +154,13 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Models\Movies.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Movies.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
@@ -162,20 +168,19 @@
     <Content Include="Views\Film\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Models\DataContext.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataContext.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Views\HomePage\Home.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Models\DataContext.dbml.layout">
-      <DependentUpon>DataContext.dbml</DependentUpon>
+    <None Include="Models\Movies.dbml.layout">
+      <DependentUpon>Movies.dbml</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\BU\" />
+    <Folder Include="Models\DAO\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
