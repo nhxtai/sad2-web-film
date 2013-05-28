@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Assignment.Models;
+using Assignment.Models.DAO;
+
 namespace Assignment.Controllers
 {
     public class HomePageController : Controller
@@ -13,8 +15,17 @@ namespace Assignment.Controllers
 
         public ActionResult Home()
         {
-            
-            return View();
+            FilmDAO fiDao = new FilmDAO();
+            AccountDAO accDao = new AccountDAO();
+            CategoryDAO cDao = new CategoryDAO();
+            HomeModel home = new HomeModel
+            {
+                MainListFilm = fiDao.GetListFilm(),
+                TopFilmHot = fiDao.GetTop10Film(),
+                Account = null,
+                ListCategory = cDao.GetAllCategory(),
+            };
+            return View(home);
         }
 
     }

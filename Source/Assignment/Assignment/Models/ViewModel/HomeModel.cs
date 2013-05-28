@@ -8,9 +8,8 @@ namespace Assignment.Models
     public class HomeModel
     {
         public List<Film> MainListFilm { get; set; }
-        public List<Film> TopDayFilm { get; set; }
-        public List<Film> TopWeekFilm { get; set; }
-
+        public List<Film> TopFilmHot { get; set; }
         public Account Account { get; set; }
+        public List<Category> ListCategory { get; set; }
     }
 }

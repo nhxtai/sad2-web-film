@@ -62,6 +62,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\FilmController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -71,7 +72,7 @@
     <Compile Include="Models\DAO\CategoryDAO.cs" />
     <Compile Include="Models\DAO\CommentDAO.cs" />
     <Compile Include="Models\DAO\FilmDAO.cs" />
-    <Compile Include="Models\ViewModel\DetailModel.cs" />
+    <Compile Include="Models\ViewModel\FilmDetailModel.cs" />
     <Compile Include="Models\ViewModel\HomeModel.cs" />
     <Compile Include="Models\Movies.designer.cs">
       <AutoGen>True</AutoGen>
