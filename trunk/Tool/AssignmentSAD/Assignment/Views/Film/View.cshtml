@@ -1,0 +1,119 @@
+﻿@model Assignment.Models.FilmDetailModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="../../Data/Player/build/mediaelementplayer.css" />
+<link rel="stylesheet" href="../../Data/Player/build/mejs-skins.css" />
+<script src="../../Data/Player/build/jquery.js" type="text/javascript"></script>
+<script src="../../Data/Player/build/mediaelement-and-player.js"></script>
+<style type="text/css">
+    #film-info
+    {
+        border: red thin solid;
+    }
+    
+    #info-right
+    {
+        border: blue thin solid;
+        float: right;
+        width: 65%;
+    }
+    
+    #info-left
+    {
+        border: blue thin solid;
+        float: left;
+    }
+    
+    #film-play
+    {
+        clear: both;
+        border: #DDDDDD 10px solid; /*border: red thin solid;*/ /*test*/
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+    #film-comment
+    {
+    }
+</style>
+<div id="film-info">
+    <div id="film-title">
+        <h3>@Model.Film.FullTitle</h3>
+    </div>
+    <div id="info-left">
+        <img src=" @Model.Film.Poster">
+    </div>
+    <div id="info-right">
+        Năm sản xuất: @Model.Film.ReleaseYear<br>
+        Mô tả:
+        <br>
+        @Model.Film.Description
+    </div>
+</div>
+<div id="film-play">
+    <video width="100%" height="360px" controls="controls" preload="none" poster="@Model.Film.Poster">		
+		<source src="../../Data/Video/video3.mp4"/>
+		<track kind="subtitles" src="../../Video/Data/video.srt" srclang="vn" /> 
+</video>
+</div>
+<div id="file-status">
+    <div id="file-view-count">
+        Views:@Model.Film.ViewCount
+    </div>
+</div>
+<div id="film-comment">
+    <div id="comment-list">
+        Comment list<br>
+        Comment list<br>
+        Comment list<br>
+        Comment list<br>
+        Comment list<br>
+    </div>
+    <div id="comment-form">
+        <form action="">
+        <table>
+            <tr>
+                <td>
+                    User:
+                    <input type="text" name="username" value="" disabled />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Content:<textarea cols="80" rows="5" name="content"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="btn" type="submit" value="Comment" />
+                </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</div>
+<script>
+    $('audio,video').mediaelementplayer({
+        // auto-select this language (instead of starting with "None")
+        startLanguage: 'vn',
+        // automatically translate into these languages
+        translations: ['es', 'ar', 'yi', 'zh-cn'],
+        // enable the dropdown list of languages
+        translationSelector: true,
+        success: function (media, node, player) {
+            var events = ['loadstart', 'play', 'pause', 'ended'];
+            for (var i = 0, il = events.length; i < il; i++) {
+                var eventName = events[i];
+                media.addEventListener(events[i], function (e) {
+                    /*$('#output').append($('<div>' + e.type + '</div>'));*/
+                });
+            }
+            console.log(player, node, media);
+        },
+        error: function () {
+
+        }
+    });
+</script>
