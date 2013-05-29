@@ -1,0 +1,36 @@
+﻿@model Assignment.Models.HomeModel
+@{
+    ViewBag.Title = "Trang Chủ | Moview365";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="new-film">
+    <ul class="thumbnails">
+        @foreach (var film in Model.MainListFilm)
+        {
+            <li class="span4">
+                <div class="thumbnail">
+                    <center>
+                        <a href="../Film/View/@film.ID">
+                            <img src="@film.Poster" alt="" />
+                        </a>
+                        <h5>
+                            @film.ShortTitle</h5>
+                    </center>
+                </div>
+            </li>
+        }
+    </ul>
+</div>
+<div id="page-number">
+    <div class="pagination  pagination-right">
+        <ul>
+            <li><a href="#">«</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">»</a></li>
+        </ul>
+    </div>
+</div>
