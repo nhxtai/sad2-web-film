@@ -1,0 +1,21 @@
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\bin\Assignment.dll
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\bin\Assignment.pdb
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\bin\EntityFramework.dll
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\bin\EntityFramework.xml
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\obj\Debug\Assignment.csprojResolveAssemblyReference.cache
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\obj\Debug\Assignment.dll
+c:\users\tainh_000\documents\visual studio 2010\Projects\Assignment\Assignment\obj\Debug\Assignment.pdb
+G:\SAD-Group2\Source\Assignment\Assignment\bin\Assignment.dll
+G:\SAD-Group2\Source\Assignment\Assignment\bin\Assignment.pdb
+G:\SAD-Group2\Source\Assignment\Assignment\bin\EntityFramework.dll
+G:\SAD-Group2\Source\Assignment\Assignment\bin\EntityFramework.xml
+G:\SAD-Group2\Source\Assignment\Assignment\obj\Debug\Assignment.csprojResolveAssemblyReference.cache
+G:\SAD-Group2\Source\Assignment\Assignment\obj\Debug\Assignment.dll
+G:\SAD-Group2\Source\Assignment\Assignment\obj\Debug\Assignment.pdb
+C:\Users\tainh_000\Desktop\Assignment\Assignment\bin\Assignment.dll
+C:\Users\tainh_000\Desktop\Assignment\Assignment\bin\Assignment.pdb
+C:\Users\tainh_000\Desktop\Assignment\Assignment\bin\EntityFramework.dll
+C:\Users\tainh_000\Desktop\Assignment\Assignment\bin\EntityFramework.xml
+C:\Users\tainh_000\Desktop\Assignment\Assignment\obj\Debug\Assignment.csprojResolveAssemblyReference.cache
+C:\Users\tainh_000\Desktop\Assignment\Assignment\obj\Debug\Assignment.dll
+C:\Users\tainh_000\Desktop\Assignment\Assignment\obj\Debug\Assignment.pdb
