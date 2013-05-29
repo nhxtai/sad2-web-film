@@ -1,0 +1,5 @@
+G:\SAD-Group2\Tool\AssignmentSAD\Assignment\bin\Assignment.dll
+G:\SAD-Group2\Tool\AssignmentSAD\Assignment\bin\Assignment.pdb
+G:\SAD-Group2\Tool\AssignmentSAD\Assignment\obj\Debug\Assignment.csprojResolveAssemblyReference.cache
+G:\SAD-Group2\Tool\AssignmentSAD\Assignment\obj\Debug\Assignment.dll
+G:\SAD-Group2\Tool\AssignmentSAD\Assignment\obj\Debug\Assignment.pdb
