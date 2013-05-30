@@ -31,6 +31,7 @@ namespace Assignment.Controllers
                 ListComment = commentDao.GetAllCommentOfAFilm(filmId),
                 TopFilm = fiDao.GetTopFilm(5)
             };
+            fiDao.IncreaseViewCount(filmId);//increase viewcount
             return View(model);
         }
 

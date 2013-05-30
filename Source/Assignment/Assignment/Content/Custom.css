@@ -6,7 +6,7 @@ body
 {
     /*border: blue thin solid;*/ /*test*/
     height: 150px;
-    width: 90%;
+    width: 100%;
     margin: auto;
     position: relative;
 }
@@ -85,7 +85,7 @@ body
 {
     /*border: blue thin solid;*/ /*test*/
     height: 100px;
-    width: 90%;
+    width: 100%;
     margin: auto;
     clear: both;
     position: relative;
