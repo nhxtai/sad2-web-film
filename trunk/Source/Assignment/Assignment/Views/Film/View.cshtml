@@ -10,33 +10,107 @@
 <style type="text/css">
     #film-info
     {
-        @*border: red thin solid;*@
     }
     
     #info-right
     {
-        @*border: blue thin solid;*@
         float: right;
         width: 65%;
     }
     
     #info-left
     {
-        @*border: blue thin solid;*@
         float: left;
     }
     
-    #film-play
+    #film-blank1
     {
         clear: both;
-        border: silver 10px solid; /*border: red thin solid;*/ /*test*/
+        height: 20px;
+    }
+    #film-blank2
+    {
+        clear: both;
+        height: 580px;
+    }
+    #film-play
+    {
+        width: 100%;
+        clear: both;
+        left: 0px;
+        position: absolute;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #000;
+    }
+    #play-video
+    {
+        margin: auto;
+        width: 900px;
+        height: 500px;
+        border: rgba(255, 255, 255, 0.15) 10px solid;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
-        width: 945px;
     }
+    #play-banner
+    {
+        text-align: right;
+        color: White;
+        padding: 5px 5px 5px 5px;
+        margin: auto;
+        margin-top: 10px;
+        width: 900px;
+        background-color: rgba(255, 255, 255, 0.15);
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+    
     #film-comment
     {
+        clear: both;
+    }
+    
+    #comment-list
+    {
+    }
+    
+    #comment-item
+    {
+    }
+    
+    #comment-user
+    {
+        font-weight: bold;
+    }
+    
+    #comment-content
+    {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    #comment-form
+    {
+    }
+    #comment-form table td
+    {
+        padding: 0;
+    }
+    #comment-form .td-input
+    {
+        border: green thind solid !important;
+        width: 400px !important;
+    }
+    
+    #comment-form input[text]
+    {
+       
+    }
+    #comment-input
+    {
+        padding:0;
+        width: 300px !important;
     }
 </style>
 <div id="film-info">
@@ -47,30 +121,62 @@
         <img src=" @Model.Film.Poster">
     </div>
     <div id="info-right">
-        Năm sản xuất: @Model.Film.ReleaseYear<br>
-        Mô tả:
-        <br>
-        @Model.Film.Description
+        <div id="info-releaseyear">
+            <b>Năm sản xuất:</b> @Model.Film.ReleaseYear
+        </div>
+        <div id="info-category">
+            <b>Thể loại:</b> @Model.Film.Category.Name
+        </div>
+        <div id="info-length">
+            <b>Độ dài:</b> @Model.Film.Length phút
+        </div>
+        <div id="info-Des">
+            <b>Mô tả:</b><br>
+            @Model.Film.Description
+        </div>
     </div>
+</div>
+<div id="film-blank1">
 </div>
 <div id="film-play">
-    <video width="945px" height="475px" controls="controls" preload="none" poster="@Model.Film.Poster">
-		<source src="../../Data/Video/Piranha2012.mp4"/>
-		<track kind="subtitles" src="../../Video/Data/video.srt" srclang="việt nam" /> 
-</video>
-</div>
-<div id="file-status">
-    <div id="file-view-count">
-        Views:@Model.Film.ViewCount
+    <div id="play-video">
+        <video width="100%" height="100%" controls="controls" preload="none" poster="@Model.Film.Poster">
+		    <source src="../../Data/Video/video3.mp4"/>
+		    <track kind="subtitles" src="../../Video/Data/video3.srt" srclang="vn" /> 
+        </video>
     </div>
+    <div id="play-banner">
+        Views: @Model.Film.ViewCount
+    </div>
+</div>
+<div id="film-blank2">
 </div>
 <div id="film-comment">
     <div id="comment-list">
-        Comment list<br>
-        Comment list<br>
-        Comment list<br>
-        Comment list<br>
-        Comment list<br>
+        <div id="comment-item">
+            <div id="comment-user">
+                User1
+            </div>
+            <div id="comment-content">
+                Comment content
+            </div>
+        </div>
+        <div id="comment-item">
+            <div id="comment-user">
+                User2
+            </div>
+            <div id="comment-content">
+                Comment content
+            </div>
+        </div>
+        <div id="comment-item">
+            <div id="comment-user">
+                User3
+            </div>
+            <div id="comment-content">
+                Comment content
+            </div>
+        </div>
     </div>
     <div id="comment-form">
         <form action="">
@@ -78,17 +184,24 @@
             <tr>
                 <td>
                     User:
-                    <input type="text" name="username" value="" disabled />
+                </td>
+                <td class="td-input">
+                    <input class="comment-input" type="text" name="username" value="" disabled />
                 </td>
             </tr>
             <tr>
                 <td>
-                    Content:<textarea cols="80" rows="5" name="content"></textarea>
+                    Content:
+                </td>
+                <td class="td-input">
+                    <textarea class="comment-input" cols="80" rows="2" name="content"></textarea>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input class="btn" type="submit" value="Comment" />
+                </td>
+                <td class="td-input">
+                    <input class="btn comment-input" type="submit" value="Comment" />
                 </td>
             </tr>
         </table>

@@ -39,7 +39,18 @@ namespace Assignment.Models.DAO
             return movie.Films.OrderByDescending(f => f.ViewCount).Take(num).ToList();
         }
 
-        
+
+        /// <summary>
+        /// Get top of newest film
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public List<Film> GetTopNewestFilm(int num)
+        {
+            MoviesDataContext movie = new MoviesDataContext();
+            return movie.Films.OrderByDescending(f => f.ID).Take(num).ToList();
+        }
+
         /// <summary>
         /// Lấy toàn bộ thông tin của 1 Film trong Database
         /// </summary>
@@ -47,9 +58,35 @@ namespace Assignment.Models.DAO
         /// <returns></returns>
         public Film GetDetailAFilm(int filmId)
         {
-             MoviesDataContext movie = new MoviesDataContext();
-             var film = movie.Films.SingleOrDefault(f => f.ID == filmId);
-             return film;
+            MoviesDataContext movie = new MoviesDataContext();
+            var film = movie.Films.SingleOrDefault(f => f.ID == filmId);
+            return film;
+        }
+
+
+        /// <summary>
+        /// Increase view count when film was watched
+        /// </summary>
+        /// <param name="filmId"></param>
+        public void IncreaseViewCount(int filmId)
+        {
+            MoviesDataContext movie = new MoviesDataContext();
+            var film = movie.Films.SingleOrDefault(f => f.ID == filmId);
+            film.ViewCount += 1;
+            movie.SubmitChanges();
+        }
+
+
+        /// <summary>
+        /// Get total view count of a film
+        /// </summary>
+        /// <param name="filmId"></param>
+        /// <returns></returns>
+        public long GetViewCount(int filmId)
+        {
+            MoviesDataContext movie = new MoviesDataContext();
+            var film = movie.Films.SingleOrDefault(f => f.ID == filmId);
+            return film.ViewCount ?? 0;
         }
     }
 }
