@@ -85,7 +85,7 @@
         font-weight: bold;
     }
     
-    #comment-content
+    #comment-list #comment-content
     {
         font-size: 12px;
         margin-left: 10px;
@@ -93,23 +93,9 @@
     #comment-form
     {
     }
-    #comment-form table td
-    {
-        padding: 0;
-    }
-    #comment-form .td-input
-    {
-        border: green thind solid !important;
-        width: 400px !important;
-    }
     
-    #comment-form input[text]
-    {
-    }
     #comment-input
     {
-        padding: 0;
-        width: 300px !important;
     }
 </style>
 <div id="film-info">
@@ -141,7 +127,7 @@
     <div id="play-video">
         <video width="100%" height="100%" controls="controls" preload="none" poster="@Model.Film.Poster">
 		    <source src="../../Data/Video/video3.mp4"/>
-		    <track kind="subtitles" src="../../Video/Data/video3.srt" srclang="vn" /> 
+		    <track kind="subtitles" src="../../Data/Video/video3.srt" srclang="vn" /> 
         </video>
     </div>
     <div id="play-banner">
@@ -159,7 +145,7 @@
                     @item.Username
                 </div>
                 <div id="comment-content">
-                    @item.Content;
+                    @item.Content
                 </div>
             </div>
         }
@@ -169,7 +155,7 @@
         <table>
             <tr>
                 <td>
-                    User:
+                    Tài khoản:
                 </td>
                 <td class="td-input">
                     <input class="comment-input" id="comment-username" type="text" name="username" value="@(this.Session["username"] ?? "")" disabled />
@@ -178,7 +164,7 @@
             </tr>
             <tr>
                 <td>
-                    Content:
+                    Nội dung:
                 </td>
                 <td class="td-input">
                     <textarea class="comment-input" id="comment-content" cols="80" rows="2" name="content"></textarea>
@@ -188,7 +174,7 @@
                 <td>
                 </td>
                 <td class="td-input">
-                    <input class="btn comment-input" id="comment-submit" type="submit" value="Comment" />
+                    <input class="btn comment-input" id="comment-submit" type="submit" value="Bình luận" />
                 </td>
             </tr>
         </table>

@@ -31,7 +31,7 @@ body
 .navbar-search .search-query
 {
     height: 20px;
-    width: 300px;
+    width: 200px;
     
 }
 
@@ -40,7 +40,7 @@ body
 /* Wrap */
 #wrap
 {
-    width: 1000px;
+    width: 950px;
     margin: auto;
     padding-top: 10px; /*border: red thin solid;test*/ /*height: 100%;*/ /*position: relative;*/
 }
@@ -67,7 +67,7 @@ body
 
 #right-nav
 {
-    width: 250px;
+    width: 220px;
     float: right; /*border: green thin solid;test*/
 }
 

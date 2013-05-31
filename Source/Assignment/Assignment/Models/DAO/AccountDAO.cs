@@ -51,7 +51,8 @@ namespace Assignment.Models.DAO
         {
             MoviesDataContext movie = new MoviesDataContext();
             var acc = movie.Accounts.SingleOrDefault(account => account.Username.Equals(username));
-            if (acc.Password.ToLower().Equals(password.ToLower()))
+
+            if (acc != null && acc.Password.ToLower().Equals(password.ToLower()))
             {
                 return acc.Role;
             }

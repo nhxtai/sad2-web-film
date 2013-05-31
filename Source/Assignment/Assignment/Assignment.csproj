@@ -191,6 +191,7 @@
     <Content Include="Views\Category\View.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Film\Comment.cshtml" />
+    <Content Include="Views\Account\Logout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
