@@ -30,6 +30,35 @@ namespace Assignment.Models.DAO
             movie.SubmitChanges();
         }
 
+
+        /// <summary>
+        /// Add new comment
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="content"></param>
+        /// <param name="filmId"></param>
+        public long AddNewComment(string username, string content, long filmId)
+        {
+            try
+            {
+                MoviesDataContext movie = new MoviesDataContext();
+                Comment comment = new Comment();
+                comment.Username = username;
+                comment.Content = content;
+                comment.FilmID = filmId;
+                comment.DateTime = DateTime.Now;
+                comment.IsActive = true;
+                movie.Comments.InsertOnSubmit(comment);
+                movie.SubmitChanges();
+                return comment.ID;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return -1;
+        }
+
         /// <summary>
         /// Deactive comment đã chọn
         /// </summary>

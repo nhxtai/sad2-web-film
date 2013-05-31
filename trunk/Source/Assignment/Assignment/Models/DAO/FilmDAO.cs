@@ -88,5 +88,6 @@ namespace Assignment.Models.DAO
             var film = movie.Films.SingleOrDefault(f => f.ID == filmId);
             return film.ViewCount ?? 0;
         }
+
     }
 }

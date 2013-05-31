@@ -39,5 +39,26 @@ namespace Assignment.Models.DAO
             acc.IsActive = false;
             movie.SubmitChanges();
         }
+
+
+        /// <summary>
+        /// Check login info return role of user
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public string CheckLogin(string username, string password)
+        {
+            MoviesDataContext movie = new MoviesDataContext();
+            var acc = movie.Accounts.SingleOrDefault(account => account.Username.Equals(username));
+            if (acc.Password.ToLower().Equals(password.ToLower()))
+            {
+                return acc.Role;
+            }
+            else
+            {
+                return "";
+            }
+        }
     }
 }
