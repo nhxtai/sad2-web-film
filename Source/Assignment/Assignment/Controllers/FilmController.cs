@@ -35,5 +35,17 @@ namespace Assignment.Controllers
             return View(model);
         }
 
+        public ActionResult Comment(string username, string content, int? filmId)
+        {
+            long commnetId = -1;
+            if (this.Session["username"] != null && Session["username"].Equals(username)
+                && filmId != null && content.Length > 0)//recheck input
+            {
+                CommentDAO commentDao = new CommentDAO();
+                commnetId = commentDao.AddNewComment(username, content, filmId ?? 0);
+            }
+            TempData["commentId"] = commnetId;
+            return PartialView();
+        }
     }
 }

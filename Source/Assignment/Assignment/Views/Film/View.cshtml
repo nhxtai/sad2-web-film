@@ -105,11 +105,10 @@
     
     #comment-form input[text]
     {
-       
     }
     #comment-input
     {
-        padding:0;
+        padding: 0;
         width: 300px !important;
     }
 </style>
@@ -153,30 +152,17 @@
 </div>
 <div id="film-comment">
     <div id="comment-list">
-        <div id="comment-item">
-            <div id="comment-user">
-                User1
+        @foreach (var item in Model.ListComment)
+        {        
+            <div id="comment-item" comID="@item.ID">
+                <div id="comment-user">
+                    @item.Username
+                </div>
+                <div id="comment-content">
+                    @item.Content;
+                </div>
             </div>
-            <div id="comment-content">
-                Comment content
-            </div>
-        </div>
-        <div id="comment-item">
-            <div id="comment-user">
-                User2
-            </div>
-            <div id="comment-content">
-                Comment content
-            </div>
-        </div>
-        <div id="comment-item">
-            <div id="comment-user">
-                User3
-            </div>
-            <div id="comment-content">
-                Comment content
-            </div>
-        </div>
+        }
     </div>
     <div id="comment-form">
         <form action="">
@@ -186,7 +172,8 @@
                     User:
                 </td>
                 <td class="td-input">
-                    <input class="comment-input" type="text" name="username" value="" disabled />
+                    <input class="comment-input" id="comment-username" type="text" name="username" value="@(this.Session["username"] ?? "")" disabled />
+                    <input id="comment-filmId" type="hidden" name="filmId" value="@this.Model.Film.ID"/>
                 </td>
             </tr>
             <tr>
@@ -194,14 +181,14 @@
                     Content:
                 </td>
                 <td class="td-input">
-                    <textarea class="comment-input" cols="80" rows="2" name="content"></textarea>
+                    <textarea class="comment-input" id="comment-content" cols="80" rows="2" name="content"></textarea>
                 </td>
             </tr>
             <tr>
                 <td>
                 </td>
                 <td class="td-input">
-                    <input class="btn comment-input" type="submit" value="Comment" />
+                    <input class="btn comment-input" id="comment-submit" type="submit" value="Comment" />
                 </td>
             </tr>
         </table>
@@ -224,10 +211,47 @@
                     /*$('#output').append($('<div>' + e.type + '</div>'));*/
                 });
             }
-            console.log(player, node, media);
+            //console.log(player, node, media);
         },
         error: function () {
 
         }
     });
+
+     $("#comment-submit").click(function (e) {
+            e.preventDefault();
+            var username= $('#comment-username').val();
+            var content = $('textarea#comment-content');
+            var contentValue=content.val();
+            var filmId = $('#comment-filmId').val();
+            var dataPost = "username="+username+"&content="+contentValue+"&filmId="+filmId;
+            console.log(dataPost);
+            $.ajax({
+			    type : "Post",
+			    url : "/Film/Comment",
+			    data : dataPost,
+			    success : function(data){
+					    if(eval(data)>0)
+                        {
+                            //clear old comment
+                            content.val("");                                                    
+                            //add virtual comment
+                            var commentlist = $("#comment-list");
+                            var newComment = '<div id="comment-item" comID="'+eval(data)+'"><div id="comment-user">'
+                            +username+'</div><div id="comment-content">'+contentValue+'</div></div>';
+                            commentlist.append(newComment);
+                        }else
+                        {
+                            alert("Comment Error!");
+                        }                                               
+       	    	    },
+       		    error : function(){
+       				    console.log('Comment Error');
+       			    },
+  			    complete : function(){ 
+
+  				    },
+		    });
+        
+        });
 </script>
