@@ -34,5 +34,11 @@ namespace Assignment.Controllers
             }
             return PartialView();
         }
+
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            return PartialView();
+        }
     }
 }
