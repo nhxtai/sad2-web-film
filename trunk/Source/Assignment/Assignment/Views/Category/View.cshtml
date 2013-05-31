@@ -119,7 +119,14 @@
                             <img src="@film.Poster" alt="" />
                         </a>
                         <h5>
-                            @film.ShortTitle</h5>
+                            @if (film.ShortTitle.Length > 19)
+                           { 
+                                @Html.Raw(film.ShortTitle.Substring(0, 15) + "...");
+                           }
+                           else
+                           { 
+                                @Html.Raw(film.ShortTitle);
+                           }</h5>
                     </center>
                 </div>
             </li>
