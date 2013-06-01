@@ -1,0 +1,52 @@
+﻿@model Assignment.Models.ViewModel.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+<h2>
+    Đăng ký tài khoản mới</h2>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    if (TempData["register-error"] != null)
+    { 
+    @Html.Raw(TempData["register-error"] + "")
+    }
+    <fieldset>
+        <legend></legend>
+        <div class="editor-label">
+            <label for="Account_Username">
+                Tài khoản</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="Account_Username" name="Account.Username" type="text" value="@(Model.Account.Username ?? "")" required/>
+        </div>
+        <div class="editor-label">
+            <label for="Account_Password">
+                Mật khẩu</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="Account_Password" name="Account.Password"
+                type="password" value="" required />
+        </div>
+        <div class="editor-label">
+            <label for="Account_Password">
+                Nhập lại mật khẩu</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="Account_Password_Retype" name="Password_Retype"
+                type="password" value="" required />
+        </div>
+        <div class="editor-label">
+            <label for="Account_Email">
+                Email</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="Account_Email" name="Account.Email" type="email" value="@(Model.Account.Email ?? "")" required/>
+        </div>
+        <p>
+            <input class="btn btn-primary" type="submit" value="Đăng ký" />
+        </p>
+    </fieldset>
+}

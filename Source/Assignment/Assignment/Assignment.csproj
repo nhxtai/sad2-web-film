@@ -83,6 +83,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Movies.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\RegisterModel.cs" />
     <Compile Include="Models\ViewModel\SearchModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -195,6 +196,7 @@
     <Content Include="Views\Film\Comment.cshtml" />
     <Content Include="Views\Account\Logout.cshtml" />
     <Content Include="Views\Search\Index.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
