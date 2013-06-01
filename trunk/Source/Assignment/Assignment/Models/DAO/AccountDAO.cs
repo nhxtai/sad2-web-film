@@ -21,11 +21,23 @@ namespace Assignment.Models.DAO
         /// Thêm mới 1 account 
         /// </summary>
         /// <param name="a"></param>
-        public void AddNewAccount(Account a)
+        public bool AddNewAccount(Account a)
         {
             MoviesDataContext movie = new MoviesDataContext();
-            movie.Accounts.InsertOnSubmit(a);
-            movie.SubmitChanges();
+            try
+            {
+                a.Role = "user";
+                a.JoinedDate = DateTime.Now;
+                a.IsActive = true;
+                movie.Accounts.InsertOnSubmit(a);
+                movie.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return false;
         }
 
         /// <summary>
