@@ -29,7 +29,8 @@ namespace Assignment.Controllers
                 Account = null,
                 Film = fiDao.GetDetailAFilm(filmId),
                 ListComment = commentDao.GetAllCommentOfAFilm(filmId),
-                TopFilm = fiDao.GetTopFilm(5)
+                TopFilm = fiDao.GetTopFilm(5),
+                NewFilm = fiDao.GetTopNewestFilm(5)
             };
             fiDao.IncreaseViewCount(filmId);//increase viewcount
             return View(model);

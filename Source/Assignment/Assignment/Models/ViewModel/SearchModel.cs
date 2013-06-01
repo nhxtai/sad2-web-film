@@ -9,6 +9,7 @@ namespace Assignment.Models.ViewModel
     {
         public List<Film> ListResultFilm { get; set; }
         public List<Film> TopFilm { get; set; }
+        public List<Film> NewFilm { get; set; }
         public List<Category> ListCategory { get; set; }
     }
 }

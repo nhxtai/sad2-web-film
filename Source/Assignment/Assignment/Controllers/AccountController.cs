@@ -52,6 +52,7 @@ namespace Assignment.Controllers
             {
                 Account = new Account(),
                 TopFilm = fiDao.GetTopFilm(5),
+                NewFilm= fiDao.GetTopNewestFilm(5),
                 ListCategory = cDao.GetAllCategory(),
             };
             return View(register);
@@ -83,6 +84,7 @@ namespace Assignment.Controllers
             {
                 Account = account,
                 TopFilm = fiDao.GetTopFilm(5),
+                NewFilm = fiDao.GetTopNewestFilm(5),
                 ListCategory = cDao.GetAllCategory(),
             };
 

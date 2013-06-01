@@ -21,6 +21,7 @@ namespace Assignment.Controllers
             {
                 ListResultFilm = fiDao.SearchFilm(keyword),
                 TopFilm = fiDao.GetTopFilm(5),
+                NewFilm = fiDao.GetTopNewestFilm(5),
                 ListCategory = cDao.GetAllCategory(),
             };
             return View(result);

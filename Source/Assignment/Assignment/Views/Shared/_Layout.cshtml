@@ -71,12 +71,24 @@
             <div id="top-film">
                 <div class="tabbable">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab1" data-toggle="tab">Top Film</a></li>
+                        <li class="active"><a href="#tab1" data-toggle="tab">Phim hay</a></li>
+                        <li><a href="#tab2" data-toggle="tab">Phim mới</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab1">
                             <ul>
                                 @foreach (var item in Model.TopFilm)
+                                {
+                                    <li><a href="/Film/View/@item.ID">@item.ShortTitle</a>
+                                        <p style="font-size: 12px; color: Red">
+                                            Lượt view : @item.ViewCount</p>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <ul>
+                                @foreach (var item in Model.NewFilm)
                                 {
                                     <li><a href="/Film/View/@item.ID">@item.ShortTitle</a>
                                         <p style="font-size: 12px; color: Red">
