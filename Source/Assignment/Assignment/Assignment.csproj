@@ -67,6 +67,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\FilmController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -82,6 +83,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Movies.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\SearchModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +194,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Film\Comment.cshtml" />
     <Content Include="Views\Account\Logout.cshtml" />
+    <Content Include="Views\Search\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
