@@ -89,5 +89,16 @@ namespace Assignment.Models.DAO
             return film.ViewCount ?? 0;
         }
 
+        /// <summary>
+        /// Search film by title
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <returns></returns>
+        public List<Film> SearchFilm(string keyword)
+        {
+            MoviesDataContext movie = new MoviesDataContext();
+            return movie.Films.Where(f => f.FullTitle.ToLower().Contains(keyword.ToLower())).ToList();
+        }
+
     }
 }

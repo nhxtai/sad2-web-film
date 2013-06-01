@@ -1,11 +1,10 @@
-﻿@model Assignment.Models.ViewModel.HomeModel
+﻿@model Assignment.Models.ViewModel.SearchModel
 @{
-    ViewBag.Title = "Trang Chủ | Moview365";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Search result";
 }
 <div id="new-film">
     <ul class="thumbnails">
-        @foreach (var film in Model.MainListFilm)
+        @foreach (var film in Model.ListResultFilm)
         {
             <li class="span4">
                 <div class="thumbnail">

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Assignment.Models;
+using Assignment.Models.ViewModel;
 using Assignment.Models.DAO;
 namespace Assignment.Controllers
 {

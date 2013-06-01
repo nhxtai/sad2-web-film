@@ -5,12 +5,10 @@ using System.Web;
 
 namespace Assignment.Models.ViewModel
 {
-    public class FilmDetailModel
+    public class SearchModel
     {
-        public Film Film { get; set; }
-        public List<Comment> ListComment { get; set; }
+        public List<Film> ListResultFilm { get; set; }
         public List<Film> TopFilm { get; set; }
         public List<Category> ListCategory { get; set; }
-        public Account Account { get; set; }
     }
 }

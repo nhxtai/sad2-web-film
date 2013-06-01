@@ -1,4 +1,4 @@
-﻿@model Assignment.Models.FilmDetailModel
+﻿@model Assignment.Models.ViewModel.FilmDetailModel
 @{
     ViewBag.Title = @Model.Film.FullTitle;
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -131,6 +131,7 @@
         </video>
     </div>
     <div id="play-banner">
+        <a href="#" id="play-light">Tắt đèn</a>
         Views: @Model.Film.ViewCount
     </div>
 </div>

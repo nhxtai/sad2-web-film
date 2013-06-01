@@ -3,29 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Assignment.Models.ViewModel;
 using Assignment.Models.DAO;
+using Assignment.Models.ViewModel;
 
 namespace Assignment.Controllers
 {
-    public class HomePageController : Controller
+    public class SearchController : Controller
     {
         //
-        // GET: /HomePage/
+        // GET: /Search/
 
-        public ActionResult Home()
+        public ActionResult Index(string keyword)
         {
             FilmDAO fiDao = new FilmDAO();
-            AccountDAO accDao = new AccountDAO();
             CategoryDAO cDao = new CategoryDAO();
-            HomeModel home = new HomeModel
+            SearchModel result = new SearchModel
             {
-                MainListFilm = fiDao.GetListFilm(),
+                ListResultFilm = fiDao.SearchFilm(keyword),
                 TopFilm = fiDao.GetTopFilm(5),
-                Account = null,
                 ListCategory = cDao.GetAllCategory(),
             };
-            return View(home);
+            return View(result);
         }
 
     }
