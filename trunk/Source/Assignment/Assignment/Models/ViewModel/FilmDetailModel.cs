@@ -10,6 +10,7 @@ namespace Assignment.Models.ViewModel
         public Film Film { get; set; }
         public List<Comment> ListComment { get; set; }
         public List<Film> TopFilm { get; set; }
+        public List<Film> NewFilm { get; set; }
         public List<Category> ListCategory { get; set; }
         public Account Account { get; set; }
     }

@@ -22,6 +22,7 @@ namespace Assignment.Controllers
             {
                 MainListFilm = fiDao.GetListFilm(),
                 TopFilm = fiDao.GetTopFilm(5),
+                NewFilm = fiDao.GetTopNewestFilm(5),
                 Account = null,
                 ListCategory = cDao.GetAllCategory(),
             };

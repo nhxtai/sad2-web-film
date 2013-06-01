@@ -23,6 +23,7 @@ namespace Assignment.Controllers
                 CurrentCat = cDao.GetACategory(id),
                 Account = null,
                 TopFilm = fiDao.GetTopFilm(5),
+                NewFilm = fiDao.GetTopNewestFilm(5),
                 FilmOfThisCategory = fiDao.GetListFilmOfACategory(id),
 
             };

@@ -39,7 +39,6 @@ namespace Assignment.Models.DAO
             return movie.Films.OrderByDescending(f => f.ViewCount).Take(num).ToList();
         }
 
-
         /// <summary>
         /// Get top of newest film
         /// </summary>
