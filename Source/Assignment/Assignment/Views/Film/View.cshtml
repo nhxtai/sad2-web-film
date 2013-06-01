@@ -97,6 +97,15 @@
     #comment-input
     {
     }
+    
+    .off-light
+    {
+        background-image:none !important;
+        background-color: Black !important;
+        color: Black !important;
+        border-color: Black !important;
+        
+    }
 </style>
 <div id="film-info">
     <div id="film-title">
@@ -123,16 +132,15 @@
 </div>
 <div id="film-blank1">
 </div>
-<div id="film-play">
-    <div id="play-video">
-        <video width="100%" height="100%" controls="controls" preload="none" poster="@Model.Film.Poster">
+<div id="film-play" class="film-show">
+    <div id="play-video" class="film-show">
+        <video class="film-show" width="100%" height="100%" controls="controls" preload="none" poster="@Model.Film.Poster">
 		    <source src="../../Data/Video/video3.mp4"/>
 		    <track kind="subtitles" src="../../Data/Video/video3.srt" srclang="vn" /> 
         </video>
     </div>
-    <div id="play-banner">
-        <a href="#" id="play-light">Tắt đèn</a>
-        Views: @Model.Film.ViewCount
+    <div id="play-banner" class="film-show">
+        <a href="#" id="play-light" class="film-show">Tắt đèn</a> Views: @Model.Film.ViewCount
     </div>
 </div>
 <div id="film-blank2">
@@ -183,6 +191,19 @@
     </div>
 </div>
 <script type="text/javascript">
+    $("#play-light").click(function (e) {
+            e.preventDefault();
+            $("*").toggleClass("off-light");            
+            $('#film-play').find('*').removeClass("off-light");       
+            if($('#play-light').text()=='Bật đèn')
+            {
+                $('#play-light').text("Tắt đèn");
+            }else
+            {
+                $('#play-light').text("Bật đèn");
+            }
+     });
+    
     $('audio,video').mediaelementplayer({
         // auto-select this language (instead of starting with "None")
         startLanguage: 'vn',
