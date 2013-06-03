@@ -68,6 +68,7 @@ namespace Assignment.Controllers
                 bool result = accountDao.AddNewAccount(account);
                 if (result == true)
                 {
+                    this.Session.Clear();
                     this.Session.Add("username", account.Username);
                     this.Session.Add("role", account.Role);
                     return RedirectToAction("Home", "HomePage");

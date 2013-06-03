@@ -17,14 +17,14 @@
         <legend></legend>
         <div class="editor-label">
             <label for="Account_Username">
-                Tài khoản</label>
+                Tài khoản <span class="required">*</span></label>
         </div>
         <div class="editor-field">
             <input class="text-box single-line" id="Account_Username" name="Account.Username" type="text" value="@(Model.Account.Username ?? "")" required/>
         </div>
         <div class="editor-label">
             <label for="Account_Password">
-                Mật khẩu</label>
+                Mật khẩu <span class="required">*</span></label>
         </div>
         <div class="editor-field">
             <input class="text-box single-line" id="Account_Password" name="Account.Password"
@@ -32,7 +32,7 @@
         </div>
         <div class="editor-label">
             <label for="Account_Password">
-                Nhập lại mật khẩu</label>
+                Nhập lại mật khẩu <span class="required">*</span></label>
         </div>
         <div class="editor-field">
             <input class="text-box single-line" id="Account_Password_Retype" name="Password_Retype"
@@ -40,7 +40,7 @@
         </div>
         <div class="editor-label">
             <label for="Account_Email">
-                Email</label>
+                Email <span class="required">*</span></label>
         </div>
         <div class="editor-field">
             <input class="text-box single-line" id="Account_Email" name="Account.Email" type="email" value="@(Model.Account.Email ?? "")" required/>
