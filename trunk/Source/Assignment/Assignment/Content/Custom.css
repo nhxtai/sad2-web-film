@@ -11,8 +11,18 @@ body
     position: relative;
 }
 
+#user-info
+{
+    font-size:12px;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    color: White;
+}
+
 #banner
 {
+    background-image: url('banner/banner1.jpg');
     height: 100px; /*border: red thin solid;test*/
 }
 
@@ -32,7 +42,6 @@ body
 {
     height: 20px;
     width: 200px;
-    
 }
 
 /* End Top*/
@@ -90,6 +99,19 @@ body
     clear: both;
     position: relative;
 }
+#footer-text
+{
+    margin:auto;
+    width:180px;
+    font-size:12px;
+    padding:0;    
+    color:Black;
+}
+#footer-text li
+{
+    padding:0;
+    line-height:15px;    
+}
 /* End footer */
 
 .radial-center
@@ -107,4 +129,8 @@ body
 h1
 {
     color: red;
+}
+.required
+{
+    color: Red;
 }

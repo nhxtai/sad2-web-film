@@ -88,6 +88,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\banner\banner.jpg" />
+    <Content Include="Content\banner\user.png" />
     <Content Include="Content\bootstrap\css\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap\css\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap\css\bootstrap.css" />
@@ -131,6 +133,7 @@
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\ViewPage.css" />
     <Content Include="Data\Player\build\background.png" />
     <Content Include="Data\Player\build\bigplay.png" />
     <Content Include="Data\Player\build\bigplay.svg" />
