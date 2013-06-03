@@ -1,116 +1,116 @@
-﻿  #film-info
-    {
-    }
-    
-    #info-right
-    {
-        float: right;
-        width: 65%;
-    }
-    
-    #info-left
-    {
-        float: left;
-    }
-    
-    #film-blank1
-    {
-        clear: both;
-        height: 20px;
-    }
-    #film-blank2
-    {
-        clear: both;
-        height: 580px;
-    }
-    #film-play
-    {
-        width: 100%;
-        clear: both;
-        left: 0px;
-        position: absolute;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background-color: #000;
-    }
-    #play-video
-    {
-        margin: auto;
-        width: 900px;
-        height: 500px;
-        border: rgba(255, 255, 255, 0.15) 10px solid;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-    }
-    #play-banner
-    {
-        text-align: right;
-        color: White;
-        padding: 5px 5px 5px 5px;
-        margin: auto;
-        margin-top: 10px;
-        width: 900px;
-        background-color: rgba(255, 255, 255, 0.15);
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-    }
-    
-    /****************************************** Comment area  ************************************************/
-    #film-comment
-    {
-        clear: both;
-    }
-    
-    #comment-list
-    {
-        margin-top: 10px;
-    }
-    
-    #comment-list #comment-content
-    {
-        font-size: 12px;
-        margin-left: 10px;
-    }
-    #comment-item
-    {
-        border-left: 10px solid #DDD;
-        border-bottom: 2px dotted #DDD;
-        margin-bottom: 5px;
-    }
-    #comment-image
-    {
-        width: 20px;
-        height: 20px;
-        margin-left: 5px;
-    }
-    #comment-user
-    {
-        font-weight: bold;
-        font-size: 15px;
-        color: Blue;
-    }
-    
-    #comment-time
-    {
-        font-size: 11px;
-        font-style: italic;
-        font-weight: lighter;
-    }
-    #comment-form
-    {
-    }
-    
-    #comment-input
-    {
-    }
-    
-    /****************************************** End comment area  ************************************************/
-    .off-light
-    {
-        background-image: none !important;
-        background-color: Black !important;
-        color: Black !important;
-        border-color: Black !important;
-    }
+﻿#film-info
+{
+}
+
+#info-right
+{
+    float: right;
+    width: 65%;
+}
+
+#info-left
+{
+    float: left;
+}
+
+#film-blank1
+{
+    clear: both;
+    height: 20px;
+}
+#film-blank2
+{
+    clear: both;
+    height: 580px;
+}
+#film-play
+{
+    width: 100%;
+    clear: both;
+    left: 0px;
+    position: absolute;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #000;
+}
+#play-video
+{
+    margin: auto;
+    width: 900px;
+    height: 500px;
+    border: rgba(255, 255, 255, 0.15) 10px solid;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+#play-banner
+{
+    text-align: right;
+    color: White;
+    padding: 5px 5px 5px 5px;
+    margin: auto;
+    margin-top: 10px;
+    width: 900px;
+    background-color: rgba(255, 255, 255, 0.15);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/****************************************** Comment area  ************************************************/
+#film-comment
+{
+    clear: both;
+}
+
+#comment-list
+{
+    margin-top: 10px;
+}
+
+#comment-list #comment-content
+{
+    font-size: 12px;
+    margin-left: 10px;
+}
+#comment-item
+{
+    border-left: 10px solid #DDD;
+    border-bottom: 2px dotted #DDD;
+    margin-bottom: 5px;
+}
+#comment-image
+{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+#comment-user
+{
+    font-weight: bold;
+    font-size: 15px;
+    color: Blue;
+}
+
+#comment-time
+{
+    font-size: 11px;
+    font-style: italic;
+    font-weight: lighter;
+}
+#comment-form
+{
+}
+
+#comment-input
+{
+}
+
+/****************************************** End comment area  ************************************************/
+.off-light
+{
+    background-image: none !important;
+    background-color: Black !important;
+    color: Black !important;
+    border-color: Black !important;
+}
